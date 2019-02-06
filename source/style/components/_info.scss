@@ -1,4 +1,5 @@
 
+ feature
 .info {
   background-color: $white;
   display: block;
@@ -102,4 +103,102 @@
     }
   }
 }
+
+  .info {
+    display: block;
+    @include breakpoint(desktopLarge) {
+      width: 100%;
+      margin-bottom: 250px;
+    }
+    @include breakpoint(desktopLaptop) {
+      width: 100%;
+      margin-bottom: 250px;
+    }
+    @include breakpoint(desktopmini) {
+      width: 100%;
+      margin-bottom: 250px;
+    }
+    @include breakpoint(tabletpoint) {
+      margin-bottom: 250px;
+      width: 100%;
+    }
+    @include breakpoint(mobile) {
+      margin-bottom: 250px;
+      width: 100%;
+    }
+      background-color: $white;
+      .porscheson {
+        position: absolute;
+        top: 70px;
+        right: -250px;
+        @include breakpoint(desktopLarge) {
+          display: none;
+        }
+        @include breakpoint(desktopLaptop) {
+         display: none;
+        }
+        @include breakpoint(desktopmini) {
+          display: none;
+        }
+        @include breakpoint(tabletpoint) {
+          display: none;
+        }
+        @include breakpoint(mobile) {
+          display: none;
+        }
+        img {
+          width: 500px;
+        }
+        figcaption {
+          padding: 5px;
+          font-family: 'Open Sans Condensed', sans-serif;
+          font-size: 18px;
+        }
+      }
+    h2 {
+        text-align: center;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 24px;
+        width: 100%;
+        padding-top: 20px;
+    }
+    p {
+      font-family: 'Loto', sans-serif;
+      padding: 20px;
+      width: 720px;
+      margin: 0 auto;
+      line-height: 24px;
+       @include breakpoint(desktopmini) {
+        width: 90%;
+       }
+       @include breakpoint(tabletpoint) {
+        width: 90%;
+       }
+       @include breakpoint(mobile) {
+        width: 90%;
+       }
+    }
+    blockquote {
+        font-family: 'Lobster', cursive;
+        font-size: 26px; 
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px 20px 0;
+        @include breakpoint(desktopmini) {
+          width: 90%;
+         }
+         @include breakpoint(tabletpoint) {
+          width: 90%;
+         }
+         @include breakpoint(mobile) {
+          width: 90%;
+         }
+        figcaption {
+          font-family: 'Open Sans Condensed', sans-serif;
+          font-size: 18px;
+          padding-top: 5px;
+        }
+    }
+  }
+ master
 
