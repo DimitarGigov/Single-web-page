@@ -1,98 +1,105 @@
 
-  .info {
-    display: block;
+.info {
+  background-color: $white;
+  display: block;
+  @include breakpoint(desktopLarge) {
+    margin-bottom: 250px;
+    width: 100%;
+  }
+  @include breakpoint(desktopLaptop) {
+    margin-bottom: 250px;
+    width: 100%;
+  }
+  @include breakpoint(desktopmini) {
+    margin-bottom: 250px;
+    width: 100%;
+  }
+  @include breakpoint(tabletpoint) {
+    margin-bottom: 250px;
+    width: 100%;
+  }
+  @include breakpoint(mobile) {
+    margin-bottom: 250px;
+    width: 100%;
+  }
+
+  .porscheson {
+    position: absolute;
+    right: -250px;
+    top: 70px;
     @include breakpoint(desktopLarge) {
-      width: 100%;
-      margin-bottom: 250px;
+      display: none;
     }
     @include breakpoint(desktopLaptop) {
-      width: 100%;
-      margin-bottom: 250px;
+      display: none;
     }
     @include breakpoint(desktopmini) {
-      width: 100%;
-      margin-bottom: 250px;
+      display: none;
     }
     @include breakpoint(tabletpoint) {
-      margin-bottom: 250px;
-      width: 100%;
+      display: none;
     }
     @include breakpoint(mobile) {
-      margin-bottom: 250px;
-      width: 100%;
+      display: none;
     }
-      background-color: $white;
-      .porscheson {
-        position: absolute;
-        top: 70px;
-        right: -250px;
-        @include breakpoint(desktopLarge) {
-          display: none;
-        }
-        @include breakpoint(desktopLaptop) {
-         display: none;
-        }
-        @include breakpoint(desktopmini) {
-          display: none;
-        }
-        @include breakpoint(tabletpoint) {
-          display: none;
-        }
-        @include breakpoint(mobile) {
-          display: none;
-        }
-        img {
-          width: 500px;
-        }
-        figcaption {
-          padding: 5px;
-          font-family: 'Open Sans Condensed', sans-serif;
-          font-size: 18px;
-        }
-      }
-    h2 {
-        text-align: center;
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 24px;
-        width: 100%;
-        padding-top: 20px;
+
+    img {
+      width: 500px;
     }
-    p {
-      font-family: 'Loto', sans-serif;
-      padding: 20px;
-      width: 720px;
-      margin: 0 auto;
-      line-height: 24px;
-       @include breakpoint(desktopmini) {
-        width: 90%;
-       }
-       @include breakpoint(tabletpoint) {
-        width: 90%;
-       }
-       @include breakpoint(mobile) {
-        width: 90%;
-       }
-    }
-    blockquote {
-        font-family: 'Lobster', cursive;
-        font-size: 26px; 
-        width: 50%;
-        margin: 0 auto;
-        padding: 20px 20px 0;
-        @include breakpoint(desktopmini) {
-          width: 90%;
-         }
-         @include breakpoint(tabletpoint) {
-          width: 90%;
-         }
-         @include breakpoint(mobile) {
-          width: 90%;
-         }
-        figcaption {
-          font-family: 'Open Sans Condensed', sans-serif;
-          font-size: 18px;
-          padding-top: 5px;
-        }
+
+    figcaption {
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 18px;
+      padding: 5px;
     }
   }
+
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    padding-top: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  p {
+    font-family: 'Loto', sans-serif;
+    line-height: 24px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 720px;
+    @include breakpoint(desktopmini) {
+      width: 90%;
+    }
+    @include breakpoint(tabletpoint) {
+      width: 90%;
+    }
+    @include breakpoint(mobile) {
+      width: 90%;
+    }
+  }
+
+  blockquote {
+    font-family: 'Lobster', cursive;
+    font-size: 26px;
+    margin: 0 auto;
+    padding: 20px 20px 0;
+    width: 50%;
+    @include breakpoint(desktopmini) {
+      width: 90%;
+    }
+    @include breakpoint(tabletpoint) {
+      width: 90%;
+    }
+    @include breakpoint(mobile) {
+      width: 90%;
+    }
+
+    figcaption {
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 18px;
+      padding-top: 5px;
+    }
+  }
+}
 
