@@ -1,0 +1,247 @@
+/* 
+============================
+        Header section 
+============================
+*/
+.primary-header {
+  background-color: $white;
+  border-bottom: 1px solid $lightgrey;
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  @include breakpoint(desktopLarge) {
+    width: 100%;
+  }
+  @include breakpoint(desktopLaptop) {
+    width: 100%;
+  }
+  @include breakpoint(desktopmini) {
+    width: 100%;
+  }
+  @include breakpoint(tabletpoint) {
+    width: 100%;
+  }
+  @include breakpoint(mobile) {
+    width: 100%;
+  }
+
+  .logo {
+
+    a {
+
+      img {
+        padding: 5px;
+        width: 80px;
+      }
+    }
+  }
+
+  /*Responsive dropdown menu section*/
+  .dropdownresponsivehidden {
+    display: none;
+  }
+  .dropdownresponsive{
+    display: none;
+    height: 300px;
+    background-color: $white;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 100px;
+    @include breakpoint(desktopmini) {
+      width: 100%;
+      display: block;
+    }
+    @include breakpoint(tabletpoint) {
+      display: block;
+      width: 100%;
+    }
+    @include breakpoint(mobile) {
+      display: block;
+      width: 100%;
+    }
+
+    li {
+      padding-top: 20px;
+      a {
+        font-family: 'Source Sans Pro', sans-serif;
+        text-decoration: none;
+        color: $black;
+        font-size: 20px;
+        &:hover {
+          color: $darkred;
+          transition: .3s ease;
+        }
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    font-family: 'Source Sans Pro', sans-serif;
+    justify-content: space-around;
+    width: 80%;
+    @include breakpoint(desktopLarge) {
+      width: 100%;
+    }
+    @include breakpoint(desktopLaptop) {
+      width: 100%;
+    }
+    @include breakpoint(desktopmini) {
+      position: relative;
+      width: 100%;
+      display: block;
+    }
+    @include breakpoint(tabletpoint) {
+      position: relative;
+      width: 100%;
+      display: block;
+    }
+    @include breakpoint(mobile) {
+      position: relative;
+      width: 100%;
+      display: block;
+    }
+
+    .sandwich {
+      display: none;
+      cursor: pointer;
+      height: 32px;
+      width: 32px;
+      transform: scale(.8);
+      z-index: 2;
+      @include breakpoint(desktopmini) {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 30px;
+      }
+      @include breakpoint(tabletpoint) {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 30px;
+      }
+      @include breakpoint(mobile) {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 30px;
+      }
+
+      &:hover {
+        transform: scale(1);
+        transition-duration: .5s;
+      }
+    }
+
+    .desktop-list {
+      font-family: 'Lato', sans-serif;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      align-items: flex-end;
+      @include breakpoint(desktopmini) {
+        width: 100%;
+        display: none;
+      }
+      @include breakpoint(tabletpoint) {
+        display: none;
+        width: 100%;
+      }
+      @include breakpoint(mobile) {
+        display: none;
+        width: 100%;
+      }
+      
+      .dropped{
+        position: relative;
+        padding: 30px;
+        .triangle-dropdown {
+          &:after {
+            content: ' ';
+            @include triangle(10px, $black, down);
+            position: absolute;
+            right: 15px;
+            top: 37px;
+          }
+        }
+        .dropdown-show {
+          background-color: $white;
+          display: block;
+          border-left: 1px solid $lightgrey;
+          border-right: 1px solid $lightgrey;
+          position: absolute;
+          width: 250px;
+          top: 76.5px;
+          text-align: center;
+          left: -70px;
+          font-family: 'Source Sans Pro', sans-serif;
+          z-index: 1;
+          li {
+            padding: 15px;
+            border-bottom: .5px solid $lightgrey;
+            cursor: pointer;
+            &:hover {
+              background-color: $darkred;
+              transition: .2s ease;
+            }
+            &:hover a {
+              color: $white;
+              transition: .2s ease;
+            }
+            a {
+              text-transform: none;
+              opacity: .8;
+              
+              &:hover {
+                border-bottom: 0;
+              }
+            }
+          }
+        }
+
+        .dropdown {
+          display: none;
+
+          a {
+            text-transform: none;
+           }
+         }
+       }
+
+       li {
+        padding: 30px;
+        @include breakpoint(desktopmini) {
+          text-align: center;
+          display: block;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        @include breakpoint(tabletpoint) {
+          text-align: center;
+          display: block;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        @include breakpoint(mobile) {
+          text-align: center;
+          display: block;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        a {
+          color: $black;
+
+          &:hover {
+            border-bottom: 2px solid $black;
+            transition: .2s ease;
+          }
+        }
+      }
+    }
+  }
+}
