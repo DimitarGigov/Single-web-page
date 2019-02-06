@@ -1,0 +1,269 @@
+/**
+ * Helper mixins
+*/
+
+// Clearfix
+// http://www.cssmojo.com/latest_new_clearfix_so_far/
+// Other clearfix options: https://github.com/stubbornella/oocss/blob/master/oocss/src/components/utils/_clearfix-me.scss
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+/*transition arrow mixin */
+$total-arrows: 3;
+$arrow-line-length: 50px;
+$arrow-line-width: 4px;
+
+// arrow animtion + choose direction
+@mixin arrow-transitions($rot: 0deg) {
+  transform: translate(-50%, -50%) rotateZ($rot);
+}
+/*------------------------------------*\
+    breakpoint vars
+\*------------------------------------*/
+$break-320: 20em;
+$break-321: 20.0625em;
+$break-480: 30em;
+$break-600: 37.5em;
+$break-768: 48em;
+$break-980: 61.25em;
+$break-1024: 64em;
+$break-1200: 75em;
+$break-1224: 76.5em;
+$break-1280: 80em;
+$break-1366: 85.375em;
+$break-1824: 114em;
+
+/*------------------------------------*\
+    breakpoint mixin
+\*------------------------------------*/
+@mixin breakpoint($point) {
+    @if $point == tablet {
+        @media (min-width: $break-768) { @content; }
+    }
+
+    @else if $point == desktop {
+        @media (min-width: $break-1280) { @content; }
+    }
+
+    //==================
+
+  @else if $point == tabletpoint {
+    @media only screen
+    and (max-width: $break-768)
+    and (min-width: $break-480) { @content; }
+  }
+
+    // Smartphones (portrait and landscape)
+    @else if $point == mobile {
+        @media only screen
+        and (min-width : $break-320)
+        and (max-width : $break-480) { @content; }
+    }
+
+    // Smartphones (landscape)
+    @else if $point == mobileLandscape {
+        @media only screen
+        and (min-width : $break-321) { @content; }
+    }
+
+    // Smartphones (portrait)
+    @else if $point == mobilePortrait {
+        @media only screen
+        and (max-width : $break-320) { @content; }
+    }
+    // Small desktop
+      @else if $point == desktopmini {
+       @media only screen
+        and (max-width: $break-980)
+        and (min-width: $break-768) { @content; }
+      }
+    // iPads (portrait and landscape)
+    @else if $point == ipad {
+        @media only screen
+        and (min-device-width : $break-768)
+        and (max-device-width : $break-1024) { @content; }
+    }
+
+    // iPads (landscape)
+    @else if $point == ipadLandscape {
+        @media only screen
+        and (min-device-width : $break-768)
+        and (max-device-width : $break-1024)
+        and (orientation : landscape) { @content; }
+    }
+
+    // iPads (portrait)
+    @else if $point == ipadPortrait {
+        @media only screen
+        and (min-device-width : $break-768)
+        and (max-device-width : $break-1024)
+        and (orientation : portrait) { @content; }
+    }
+
+    // Desktops and laptops
+    @else if $point == desktopLaptop {
+        @media only screen
+        and (min-width : $break-980)
+        and (max-width : $break-1280) { @content; }
+    }
+
+    // Large screens
+    @else if $point == desktopLarge {
+        @media only screen
+        and (max-width : $break-1824)
+        and (min-width : $break-1280) { @content; }
+    }
+
+    // iPhone 4
+    @else if $point == iphone4 {
+        @media
+        only screen and (-webkit-min-device-pixel-ratio : 1.5),
+        only screen and (min-device-pixel-ratio : 1.5) { @content; }
+    }
+}
+
+/*------------------------------------*\
+    breakpoint usage
+\*------------------------------------*/
+header {
+    height: 100px;
+    @include breakpoint(tablet) { height: auto; }
+}
+
+
+
+
+
+/*
+// Media queries
+@mixin breakpoint($point) {
+  @if $point == tablet {
+    @media (max-width: $break-768)
+    and (min-width: $break-480)  { @content; }
+  } @else if $point == desktop {
+    @media (min-width: $break-1280) { @content; }
+  }
+
+// Small desktop
+@else if $point == desktopmini {
+  @media only screen
+  and (max-width: $break-980)
+  and (min-width: $break-768) { @content; }
+}
+  // Smartphones (portrait and landscape)
+
+@else if $point == mobile {
+  @media only screen
+  and (min-width: $break-320)
+  and (max-width: $break-480)  { @content; }
+}
+
+  // Desktops and laptops
+
+@else if $point == desktopLaptop {
+  @media only screen
+  and (min-width : $break-980)
+  and (max-width: $break-1280)  { @content; }
+}
+
+  // Large screens
+
+  @else if $point == desktopLarge {
+    @media only screen
+    and (min-width : $break-1280)
+    and (max-width: $break-1740) { @content; }
+  }
+}
+//==============================================
+*/
+// Text selection
+@mixin text-selection($color-selection, $color-selection-bg) {
+  ::-moz-selection { // sass-lint:disable-line no-vendor-prefixes
+    background: $color-selection-bg;
+    color: $color-selection;
+    text-shadow: none;
+  }
+
+  ::selection {
+    background: $color-selection-bg;
+    color: $color-selection;
+    text-shadow: none;
+  }
+}
+/* Quotes mixin*/
+// Add quotes to an element.
+//
+//  Parameters:
+//  
+//  * [optional] `size` -- Size, in em of the quotes 
+//  * [optional] `padding` -- Top-left padding on lefthand quote 
+//  * [optional] `left` -- Left quote glyph 
+//  * [optional] `right` -- Right quote glyph 
+@mixin my-quotes($size: 1.3em, $padding:false, $left:'\201C', $right:'\201D') {
+	&:after, &:before { font-size: $size; }
+	&:after { content: $right; }
+	&:before {
+		content: $left;
+		display: inline-block;
+		position: relative;
+		@if $padding != false {	
+			left: -#{$padding};
+			top: -#{$padding};
+		} 
+		@else {
+			left: -.17em;
+			top: -.05em;
+		}
+	}
+}
+/* Arrow mixin*/
+/* Example Usage:
+
+@include triangle(15px, $color-blue-500, up)
+*/
+@mixin triangle($size, $color, $direction) {
+  height: 0;
+  width: 0;
+
+  $width: nth($size, 1);
+  $height: nth($size, length($size));
+
+  $width: $width / 2;
+  $height: if(length($size) > 1, $height, $height/2);
+
+  @if $direction == up {
+      border-bottom: $height solid $color;
+      border-left: $width solid transparent;
+      border-right: $width solid transparent;
+
+  } @else if $direction == right {
+      border-left: $height solid $color;
+      border-bottom: $width solid transparent;
+      border-top: $width solid transparent;
+
+  } @else if $direction == down {
+      border-top: $height solid $color;
+      border-left: $width solid transparent;
+      border-right: $width solid transparent;
+
+  } @else if $direction == left {
+      border-right: $height solid $color;
+      border-bottom: $width solid transparent;
+      border-top: $width solid transparent;
+  }
+}
+
+//Placeholders
+//Usage:
+//@include placeholder;
+@mixin placeholder {
+  // sass-lint:disable no-vendor-prefixes
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}

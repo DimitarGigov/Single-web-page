@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <title>Static website Boilerplate</title>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+  <script src="Dropdown.js"></script>
+  <script src="Sideout.js"></script>
+  <script src="footer.js"></script>
+</head>
+<body>
+  <header class="container primary-header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/porschelogo.png">
+      </a>
+    </div>
+    <ul class="dropdownresponsivehidden dropdownresponsive" id="showmenu">
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Racing</a></li>
+      <li><a href="#">Models</a></li>
+      <li><a href="#">Our Racing Academy</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+   <nav>
+      <img class="sandwich" src="images/sandwichbar.png" onclick="myFuncresbar()">
+      <ul class="desktop-list">
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Racing</a></li>
+        <li  class="dropped" onmouseover="myFunction()" onmouseout="myFunc()">
+          <a href="#" class="triangle-dropdown">About</a>
+          <ul class="dropdown dropdown-show" id="drop">
+           <li><a href="#">What we do</a></li>
+           <li><a href="#">Mission</a></li>
+           <li><a href="#">Our team</a></li>
+           <li><a href="#">Sponsors</a></li>
+           <li><a href="#">Links</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="container">
+    <aside class="sidemenu">
+        <ul>
+          <li class="sided" onmouseover="myFuncsideout()" onmouseout="myFuncside()" >
+            <a href="#">Models</a>
+            <div class="sideout sideout-show" id="side">
+              <div>
+                <a href="#">981</a>
+                <img src="images/981.png">
+              </div>
+              <div>
+                  <a href="#">997</a>
+                  <img src="images/997.png">
+              </div>
+              <div>
+                  <a href="#">991</a>
+                  <img src="images/991.png">
+              </div>
+              <div>
+                  <a href="#">992</a>
+                  <img src="images/992.png">
+              </div>
+              <div>
+                  <a href="#">918</a>
+                  <img src="images/918.png">
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#">Our Racing Academy</a>
+            <ul class="sideout">
+              <li><a href="#">John</a></li>
+              <li><a href="#">Peter</a></li>
+              <li><a href="#">Jessy</a></li>
+              <li><a href="#">Alex</a></li>
+            </ul>
+          </li>
+          <!--<li><a href="#">Hans Mezger</a></li>-->
+          <li><a href="#">Water-cooled engines</a></li>
+          <li><a href="#">Air-cooled engines</a></li>
+        </ul>
+      </aside>
+      <section class="wrapper info">
+          <figure class="porscheson">
+              <img src="images/ferdinandson1.jpg">
+              <figcaption>- Ferdinand A. Porsche - The designer of the famous Porsche 911.</figcaption>
+          </figure>
+        <h2>Introduction</h2>
+        <p>
+            In an age when most of its competitors have been absorbed into larger manufacturers, Porsche remains a staunchly — and profitably — independent maker of high-performance sportscars. The Porsche name has become synonymous with sports cars and racecars because that is what company founders Ferdinand Porsche and his son Ferdinand ("Ferry") set out to build when they first set up shop with 200 workers in 1948.
+  
+            The senior Porsche, whose engineering experience included Daimler-Benz, established an independent design and engineering firm in 1931 and designed the Volkswagen Beetle. He brought a half-century of experience with innovation, from a turn-of-the-century four-wheel drive gasoline/electric hybrid vehicle to the virtually unbeatable Auto Union Grand Prix cars of the 1930s.
+            
+            The younger Porsche helped grow the new company and was instrumental in designing the first Porsche sportscar, the 356. Though sporting just 40 horsepower from a rear-mounted, slightly souped-up Beetle engine, the first Porsche quickly made its mark with agile handling, as well as attributes almost unknown among sportscars of the day — comfort and reliability.
+            
+            
+        </p>
+        <p>
+            Porsche introduced its own engines in the mid-1950s, along with more powerful versions of the 356. After the 356 came a true legend among modern automobiles, the Porsche 911. Ahead of its time when introduced in 1964, the rear-engine 911 evolved over three decades when Porsche introduced a completely new 911 Carrera for 1999. The lineage includes 911 S (1967), the 911 Turbo (1974 [1976 in the U.S.]), the first 911 Cabriolet (1983) and the first all-wheel drive 911 Carrera 4 (1990).
+  
+            Porsche introduced a series of front-engine models in the 1970s, starting with the four-cylinder 924 (1976) and the unrelated 928 powered by the company’s first V-8 engine (1978). From the 924 sprang the more powerful and sophisticated 944 and 944 Turbo, and finally the 968 in the early ‘90s. Porsche retired both the 968 and 928 in 1995 to focus on development of the rear-engine 911 and mid-engine Boxster.
+            
+            Porsche is also synonymous with racing, and Porsche cars began competing almost immediately. To date, Porsche cars have won an estimated 24,000 auto races around the world, including more than 50 class wins at Le Mans.
+            
+            
+        </p>
+        <blockquote>
+          "I couldn't find the sports car of my dreams, so I built it myself."
+          <figcaption>- Ferdinand Porsche</figcaption>
+        </blockquote>
+      </section>
+    <section class="wrapper blue-wrapper">
+      <div class="grid">
+        <div class="col-1-4">
+          <div class="hidden-info">
+           <h3>917-30</h3>
+           <a href="#">About 917-30</a>
+          </div>
+          <img src="images/917.jpg">
+        </div>
+        <div class="col-1-4">
+            <div class="hidden-info">
+                <h3>962</h3>
+                <a href="#">About 962</a>
+               </div>
+            <img src="images/962.jpg">
+        </div>
+        <div class="col-1-4">
+            <div class="hidden-info">
+                <h3>936</h3>
+                <a href="#">About 936</a>
+               </div>
+            <img src="images/936.jpg">
+        </div>
+        <div class="col-1-4">
+            <div class="hidden-info">
+                <h3>GT1</h3>
+                <a href="#">About GT1</a>
+               </div>
+            <img src="images/gt1.jpg">
+        </div>
+      </div>      
+    </section>
+  </section>
+  <footer class="foot-nav">
+    <ul class="top-list">
+      <li>
+        <a class="main-anchor" onclick="dropFunc()">Build & Find</a>
+        <ul class="footup footdrop" id="foot">
+          <div><a href="#">Build your Porsche</a></div>
+          <div><a href="#">Compare Models</a></div>
+          <div><a href="#">Search Pre-Owned</a></div>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="main-anchor">Online Services</a>
+      </li>
+      <li>
+        <a class="main-anchor" onclick="dropFuncone()">Behind the Scenes</a>
+        <ul class="footup footdrop" id="footone">
+          <div><a href="#">Passion Motorsports</a></div>
+          <div><a href="#">Porsche Experience</a></div>
+          <div><a href="#">Porsche Classic</a></div>
+          <div><a href="#">About Porsche - Porsche Museum</a></div>
+        </ul>
+      </li>
+      <li>
+        <a class="main-anchor" onclick="dropFunctwo()">Porsche Company</a>
+        <ul class="footup footdrop" id="foottwo">
+          <div><a href="#">At a Glance</a></div>
+          <div><a href="#">Responsibility</a></div>
+          <div><a href="#">Jobs & Careers</a></div>
+          <div><a href="#">Christophorus - The Porsche Magazine</a></div>
+        </ul> 
+      </li>
+    </ul>
+    <aside>
+      <ul class="bottom-list">
+        <li><a href="#"><img src="images/social/face.png" class="face"></a></li>
+        <li><a href="#"><img src="images/social/insta.png" class="insta"></a></li>
+        <li><a href="#"><img src="images/social/twitter.png" class="twitter"></a></li>
+        <li><a href="#"><img src="images/social/youtube.png" class="youtube"></a></li>
+      </ul>
+    </aside>
+  </footer>
+</body>
+</html>

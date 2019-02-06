@@ -1,0 +1,37 @@
+/* 
+============================
+        Core section 
+============================
+*/
+body {
+ 
+    width: 100%;
+  }
+  h1 {
+    font-size: 30px;
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 1920px;
+    @include breakpoint(desktopLarge) {
+      width: 100%;
+    }
+    @include breakpoint(desktopLaptop) {
+      width: 100%;
+    }
+    @include breakpoint(desktopmini) {
+      width: 100%;
+    }
+    @include breakpoint(tabletpoint) {
+      width: 100%;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+

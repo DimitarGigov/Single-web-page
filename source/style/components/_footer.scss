@@ -1,0 +1,212 @@
+/* 
+============================
+        Footer section 
+============================
+*/
+.foot-nav {
+  margin: 0 auto;
+  width: 1280px;
+  @include breakpoint(desktopLarge) {
+    width: 100%;
+  }
+  @include breakpoint(desktopLaptop) {
+    width: 100%;
+  }
+  @include breakpoint(desktopmini) {
+    width: 100%;
+  }
+  @include breakpoint(tabletpoint) {
+    width: 100%;
+  }
+  @include breakpoint(mobile) {
+    width: 100%;
+  }
+  
+  .top-list {
+    border-top: 1px solid $lightgrey;  
+    display: flex;
+    justify-content: space-around;
+    padding-top: 35px;
+    @include breakpoint(desktopmini) {
+      border: 0;
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+    @include breakpoint(tabletpoint) {
+      border: 0;
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+    @include breakpoint(mobile) {
+      border: 0;
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+
+    .footdrop {
+      @include breakpoint(desktopmini) {
+        padding: 20px;
+        width: 100%;
+        display: block;
+      }
+      @include breakpoint(tabletpoint) {
+        padding: 20px;
+        width: 100%;
+        display: block;
+      }
+      @include breakpoint(mobile) {
+        padding: 20px;
+        width: 100%;
+        display: block;
+      }
+    }
+    li {
+      display: flex;
+      flex-flow: column;
+      @include breakpoint(desktopmini) {
+        border-bottom: 1px solid $lightgrey;
+        padding: 20px;
+        width: 100%;
+      }
+      @include breakpoint(tabletpoint) {
+        border-bottom: 1px solid $lightgrey;
+        padding: 20px;
+        width: 100%;
+      }
+      @include breakpoint(mobile) {
+        border-bottom: 1px solid $lightgrey;
+        padding: 20px;
+        width: 100%;
+      }
+
+      .main-anchor {
+        text-decoration: none;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 20px;
+        color: $black;
+        opacity: .7;
+        padding: 10px;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
+        @include breakpoint(desktopmini) {
+          position: relative;
+
+          &:after {
+          content: ' ';
+          @include triangle(10px, $black, down);
+          position: absolute;
+          bottom: 15px;
+          }
+        }
+        @include breakpoint(tabletpoint) {
+          position: relative;
+        &:after {
+          content: ' ';
+          @include triangle(10px, $black, down);
+          position: absolute;
+          bottom: 15px;
+          }
+        }
+        @include breakpoint(mobile) {
+          position: relative;
+        &:after {
+          content: ' ';
+          @include triangle(10px, $black, down);
+          position: absolute;
+          bottom: 15px;
+         }
+        }
+      }
+
+      ul {
+        @include breakpoint(desktopmini) {
+          display: none;
+        }
+        @include breakpoint(tabletpoint) {
+          display: none;
+        }
+        @include breakpoint(mobile) {
+          display: none;
+        }
+      div {
+        padding: 20px 10px 10px;
+      
+        a {
+          text-decoration: none;
+          font-family: 'Lato', sans-serif;
+          font-size: 14px;
+          color: $black;
+
+          &:hover {
+            color: $darkred;
+            transition: .3s ease;
+
+          }
+        }
+     
+      }
+    }
+    }
+  }
+  .bottom-list {
+    width: 20%;
+    display: flex;
+    font-size: 0;
+    justify-content: space-around;
+    background-color: $black;
+    @include breakpoint(desktopmini) {
+      width: 100%;
+    }
+    @include breakpoint(tabletpoint) {
+     width: 100%;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+    li {
+        height: 100%;        
+      a {
+        height: 100%;
+        .youtube {
+          height: 100%;
+          width: 35px;
+          border-bottom: 3px solid $youtubecolor;
+          &:hover {
+          background-color: $youtubecolor;
+          transition: .5s ease;
+          }
+        }
+          .face {
+          border-bottom: 3px solid $facecolor;
+          width: 35px;
+          &:hover {
+          background-color: $facecolor;
+          transition: .5s ease;
+          }
+        }
+          .insta {
+          border-bottom: 3px solid $instacolor;
+          width: 35px;
+          &:hover {
+          background-color: $instacolor;
+          transition: .5s ease;
+          }
+        }
+          .twitter {
+          border-bottom: 3px solid $twittercolor;
+          width: 35px;
+          &:hover {
+          background-color: $twittercolor;
+          transition: .5s ease;
+          }
+        }
+      }
+    }
+  }
+}

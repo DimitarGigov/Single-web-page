@@ -1,0 +1,156 @@
+/* 
+============================
+        Grid section 
+============================
+*/
+.wrapper {
+  width: 1280px;
+  margin: 0 auto;
+  background-color: $lightergrey;
+  position: relative;
+  top: -230px;
+  @include breakpoint(desktopLarge) {
+    top: 0;
+    
+  }
+  @include breakpoint(desktopLaptop) {
+    top: 0;
+    
+  }
+  @include breakpoint(desktopmini) {
+    top: 0;
+    
+  }
+  @include breakpoint(tabletpoint) {
+    top: 0;
+   
+  }
+  @include breakpoint(mobile) {
+    top: 0;
+    
+  }
+}
+.blue-wrapper {
+  background-color: $black;
+  display: flex;
+  margin: 0 auto;
+  width: 1280px;
+  justify-content: space-around;
+  flex-flow: column;
+  position: relative;
+  top: -200px;
+ 
+  @include breakpoint(desktopLaptop) {
+    width: 100%;
+    padding: 20px;
+  }
+  @include breakpoint(desktopmini) {
+    padding: 20px;
+    width: 100%;
+  }
+  @include breakpoint(tabletpoint) {
+    display: block;
+    padding: 20px;
+    width: 100%;
+  }
+  @include breakpoint(mobile) {
+    padding: 20px;
+    width: 100%;
+  }
+  .grid {
+     display: flex;
+     height: 100%;
+     @include breakpoint(desktopmini) {
+      display: block;
+      padding: 20px;
+      width: 100%;
+    }
+     @include breakpoint(tabletpoint) {
+      display: block;
+      padding: 20px;
+      width: 100%;
+    }
+    @include breakpoint(mobile) {
+      display: block;
+      padding: 20px;
+      width: 100%;
+    }
+     .col-1-4 {
+      width: 33%;
+      position: relative;
+      @include breakpoint(desktopmini) {
+        display: block;
+        
+        margin: 0 auto;
+        width: 100%;
+      }
+       @include breakpoint(tabletpoint) {
+        display: block;
+       
+        width: 100%;
+      }
+      @include breakpoint(mobile) {
+        display: block;
+        
+        width: 100%;
+      }
+      &:hover {
+        opacity: 1;
+      }
+      &:hover .hidden-info {
+        visibility: visible;
+        opacity: 1;
+     }
+     img {
+        height: 100%;
+        width: 100%;
+     }
+     .hidden-info {
+        position: absolute;
+        cursor: pointer;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: $darkred;
+        opacity: 0;
+        font-size: 24px;
+        visibility: hidden;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 25px 25px 25px;
+        width: 100%;
+        height: 100%;
+        background-color: $darkopacity;
+        transition: .5s ease;
+        @include breakpoint(desktopmini) {
+          justify-content: space-around;
+        }
+         @include breakpoint(tabletpoint) {
+          justify-content: space-around;
+          padding: 0;
+        }
+        @include breakpoint(mobile) {
+          justify-content: space-around;
+          padding: 25px 0;
+          width: 100%;
+         
+        }
+        h3 {
+          color: $white;
+          cursor: pointer;
+          &:hover{
+            color: $darkred;
+            transition: .3s ease;
+          }
+        }
+        a {
+          color: $white;
+          &:hover{
+            color: $darkred;
+            transition: .3s ease;
+          }
+        }
+       }
+     }
+  }
+}
